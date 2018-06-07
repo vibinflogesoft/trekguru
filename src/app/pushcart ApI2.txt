@@ -1,0 +1,93 @@
+4. Search page(GET)
+
+Input--->Search Query(Product Name)
+Output--->List of products on the basis of search query
+	1.Product Id
+	2.Product Name
+	3.Icon Size Image of Product
+
+
+5 .Add delivery Addresspage(POST)
+
+Input-->Formdata
+	1.Location Name
+	2.Postal Code
+	3.Floor
+	4.Unit
+	5.First Name
+	6.Last Name
+	7.Delivery Type
+Eg:{
+	Street:" kalooor"
+	delivertype:"Office"
+	firstname:"Vinod"
+	floor:4
+	lastname:"p"
+	postcode:682020
+	unit:2
+}
+
+6. My Addresses(GET)
+
+input------>CustomerId
+Output----->Addresses already added(Add Delivery address page)	
+	1.Delivery type
+	2.First Name
+	3.LastName
+	4.Location Name
+	5.Postal code
+	6.Floor
+	7.Unit	
+
+7.Add to Cart(+)/Remove From Cart(-)(POST)
+
+input---->ProductDetails
+	1.Product Id
+	2.Product price
+	3.Product Count
+
+
+8.My Cart Page(Get)
+
+input---->CustomerId
+Output---->
+	1.Product Id
+	2.Product Thumbnail image
+	3.Product Name
+	4.Unit
+	5.Actual price
+	6.Offer Price
+	7.Offer Percentage
+	8.sub total
+	9.Delivery Charge
+	10.Total Price
+
+9.My Profile Page
+     9.1 Save details(POST)
+
+         Input------>FormData
+         	1.First Name
+         	2.Last Name
+         	3.Email
+         	4.Phone Number
+
+       9.2 Change Password
+       
+       	Input--->Formdata
+       	 1.Current Password
+       	 2.New Password
+
+
+10.My Orders Page(GET)
+	Input----->CustomerId
+	OutPut--->OrderDetails
+	1.date of order
+	2.Sheduled date of delivery
+	3.Order id
+	4.Order status(Canceled/delivered)
+	5.Final Paid amount
+
+11.Order Details Page
+	Input---->CustomerId/Order id
+	1.date of order
+	2.	

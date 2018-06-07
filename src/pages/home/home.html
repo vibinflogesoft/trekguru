@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Trek Guru</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+<!--  <img-loader src="https://www.hdwallpapers.in/walls/superheroes_of_justice_league_4k_8k-HD.jpg" spinner=true >
+</img-loader> -->
+    <ion-card *ngFor="let data of gallerry" (click)="getDistrictPlaces(data)" >
+        <img src="{{data.image}}" />
+      
+        <div class="card-title">{{data.title}}</div>
+        <div class="card-subtitle">{{data.subtitle}}</div>
+    </ion-card>
+    <ion-select>
+      <ion-option *ngFor="let items of clubDetails">{{items.clubName}}</ion-option>
+    </ion-select>
+
+
+</ion-content>

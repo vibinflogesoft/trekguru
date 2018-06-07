@@ -1,0 +1,27 @@
+
+<ion-header>
+	<ion-navbar>
+		<ion-title *ngIf="specifictour">{{specifictour.title}}</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-slides pager="true" class="container">
+		<ion-slide *ngFor="let images of specifictour?.slider">
+			<img src="{{images.image}}" style="width:100%;height:auto;"/>
+		</ion-slide>
+	</ion-slides>
+	<p align="center" *ngIf="specifictour">{{specifictour.decs}}</p>
+		<ion-list>
+		<ion-item *ngFor="let places of specifictour?.specialities" (click)="getSightDescription(places)">
+			<ion-thumbnail item-start>
+				<img src="{{places.image}}">
+			</ion-thumbnail>
+			<h2>{{places.title}}</h2>
+			<p>Hayao Miyazaki • 1988</p>
+			<button ion-button clear item-end color="dark">
+				<ion-icon name="arrow-dropright"></ion-icon>
+			</button>
+		</ion-item>
+	</ion-list>
+</ion-content>
